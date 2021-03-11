@@ -1,3 +1,9 @@
+enum GenderType{
+    male="male",
+    female="female"
+}
+//숫자 열거형에 반대된 문자형 열거형이 값을 알아보기 편하다는 장점이 있음
+
 let student = {
     name: 'Lee',
     age: 18,
@@ -17,7 +23,7 @@ interface Student{
     studentID: number;
     studentName: string;
     age?: number;
-    gender: string;
+    gender: 'male' | 'female';
     subject: string;
     courseCompleted: boolean;
     addComment?:(comment:string) => string;
@@ -38,9 +44,9 @@ function getStudent(studentID: number): Student{
 
 let student1= {
     studentID: 2215,
-    studentName: 'Ju Yul',
+    studentName: 'Lee',
     age: 18,
-    gender: 'male',
+    gender: GenderType.male,
     subject: 'Server',
     courseCompleted: false,
 }

@@ -1,3 +1,9 @@
+var GenderType;
+(function (GenderType) {
+    GenderType["male"] = "male";
+    GenderType["female"] = "female";
+})(GenderType || (GenderType = {}));
+//숫자 열거형에 반대된 문자형 열거형이 값을 알아보기 편하다는 장점이 있음
 var student = {
     name: 'Lee',
     age: 18,
@@ -25,9 +31,9 @@ function getStudent(studentID) {
 //인터페이스가 반환값이기 때문에 리턴에서 인터페이스의 모든 요소를 반환하여야 한다.
 var student1 = {
     studentID: 2215,
-    studentName: 'Ju Yul',
+    studentName: 'Lee',
     age: 18,
-    gender: 'male',
+    gender: GenderType.male,
     subject: 'Server',
     courseCompleted: false
 };
