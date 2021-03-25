@@ -1,10 +1,19 @@
-function sendGreeting(message, userName) {
-    if (message === void 0) { message = 'Hello'; }
-    console.log(message + ", " + userName);
-}
-sendGreeting();
-sendGreeting('Good morning');
-sendGreeting('Bye', 'Lee');
-/*매개변수와 인자의 수가 일치하지 않으면 에러 메서지가 출력된다.
-선택적 매개변수의 오른쪽에 오는 매개변수들은 모두 선택적 매개변수여야 한다. */
-//message 매개변수는 Hello가 기본 값이기에 string을 써줄 필요가 없다.
+var num;
+(function (num) {
+    num[num["zero"] = 0] = "zero";
+    num[num["one"] = 1] = "one";
+    num[num["two"] = 2] = "two";
+})(num || (num = {}));
+;
+/*
+enum에 값을 할당하지 않으면 0이 된다. -> zero = 0
+값이 할당되어 있고 그 다음값이 할당되지 않으면 그 전 값에 +1을 더한다. -> two = 2
+*/
+console.log(num.zero, num.one, num.two); // 0, 1, 2
+/* 클래스의 접근 범위
+public: 외부, 상속 둘 다 접근 가능합니다.
+protected: 외부에서 접근은 금지하지만 상속으로는 접근 가능
+private: 외부, 상속 둥 다 접근할 수 없습니다.
+readonly: 읽기 전용(값 변경 X)
+
+*/ 
