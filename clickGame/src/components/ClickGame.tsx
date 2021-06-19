@@ -10,6 +10,7 @@ const TextField: React.FC = () => {
     let [makeMoney, setMakeMoney] = useState(1);
     let [upgradePrice, setUpgradePrice] = useState(30);
     let [level, upgradeLevel] = useState(1);
+    //item 구매 
     function buyItem():void{
         if(counter >= itemPrice){
             console.log('구매성공');
@@ -21,6 +22,7 @@ const TextField: React.FC = () => {
             alert('돈이 부족하여 구매할 수 없습니다.');
         }
     }
+    //upgrade
     function upgradeClick():void{
         if(counter >= upgradePrice){
             setMakeMoney(makeMoney += 1);
