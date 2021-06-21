@@ -23,6 +23,7 @@ const TextField: React.FC = () => {
         }
     }
     //upgrade
+    //return 타입 명시
     function upgradeClick():void{
         if(counter >= upgradePrice){
             setMakeMoney(makeMoney += 1);
